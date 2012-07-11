@@ -291,7 +291,7 @@ class Paginator {
 
 		if (is_null($text))
 		{
-			$text = Lang::line("pagination.{$element}")->get($this->language);
+			$text = \Lang::line("pagination.{$element}")->get($this->language);
 		}
 
 		// Each consumer of this method provides a "disabled" Closure which can
