@@ -612,6 +612,18 @@ class Validator {
 	}
 
 	/**
+	 * Validate that an attribute contains only alpha characters and spaces.
+	 *
+	 * @param  string  $attribute
+	 * @param  mixed   $value
+	 * @return bool
+	 */
+	protected function validate_alpha_space($attribute, $value)
+	{
+		return preg_match('/^([a-z ])+$/i', $value);
+	}
+
+	/**
 	 * Validate that an attribute passes a regular expression check.
 	 *
 	 * @param  string  $attribute
